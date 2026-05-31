@@ -3,7 +3,16 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <div style={{...styles.heroContainer, backgroundImage: `url('/collections/adshoots_Velvet_luxury/Product shot 1.webp')`}}>
+    <div style={styles.heroContainer}>
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        style={styles.videoBackground}
+      >
+        <source src="/hero-video.mp4" type="video/mp4" />
+      </video>
       <div style={styles.videoOverlay}></div>
       
       <div style={styles.content}>
@@ -22,6 +31,9 @@ const Hero = () => {
           style={styles.subtitle}
         >
           WE DON'T CREATE VISUALS. WE BUILD BRAND PRESENCE.
+          <span style={{ display: 'block', fontSize: '0.85rem', color: '#888', marginTop: '15px', letterSpacing: '1px' }}>
+            PRE-BUILT ASSETS ON GUMROAD & COSMOFEED | CUSTOM ORDERS AVAILABLE
+          </span>
         </motion.p>
         <motion.div
           initial={{ opacity: 0 }}
@@ -47,8 +59,18 @@ const styles = {
     justifyContent: 'center',
     overflow: 'hidden',
     backgroundColor: '#000',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
+  },
+  videoBackground: {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    minWidth: '100%',
+    minHeight: '100%',
+    width: 'auto',
+    height: 'auto',
+    zIndex: 1,
+    transform: 'translate(-50%, -50%)',
+    objectFit: 'cover',
   },
   videoPlaceholder: {
     position: 'absolute',

@@ -84,9 +84,14 @@ const LookbookModal = ({ collection, onClose }) => {
             <Page>
               <div style={styles.backCover}>
                 <h2 style={{fontFamily: 'Playfair Display', marginBottom: '30px'}}>Make It Yours</h2>
-                <a href="https://cestudioco.gumroad.com/" target="_blank" rel="noreferrer" style={{textDecoration: 'none', marginBottom: '15px'}}>
-                  <button className="luxury-btn" style={{width: '100%'}}>Buy Pre-built Assets</button>
-                </a>
+                <div style={{ display: 'flex', gap: '10px', width: '100%', marginBottom: '15px' }}>
+                  <a href="https://cestudioco.gumroad.com/" target="_blank" rel="noreferrer" style={{textDecoration: 'none', flex: 1}}>
+                    <button className="luxury-btn" style={{width: '100%', padding: '12px 5px', fontSize: '0.85rem', whiteSpace: 'nowrap'}}>Gumroad</button>
+                  </a>
+                  <a href="https://superprofile.bio/cechasingelegencein" target="_blank" rel="noreferrer" style={{textDecoration: 'none', flex: 1}}>
+                    <button className="luxury-btn" style={{width: '100%', padding: '12px 5px', fontSize: '0.85rem', whiteSpace: 'nowrap'}}>Cosmofeed</button>
+                  </a>
+                </div>
                 <button 
                   className="outline-btn" 
                   style={{width: '100%'}} 
